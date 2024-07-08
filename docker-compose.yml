@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    #image: ubuntu:jammy
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./.storage/app:/var/www/html
+
